@@ -69,14 +69,14 @@ body{
         border-radius: 50%;
     }
 }
-@keyframes stop{
+/* @keyframes stop{
     0%{
         opacity: 1;
     }
     100%{
         opacity: 0;
     }
-}
+} */
  .contaner:hover .box{
     opacity: 1;
     transition-delay: 2.1s;
