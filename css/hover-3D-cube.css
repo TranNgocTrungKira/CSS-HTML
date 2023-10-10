@@ -48,6 +48,7 @@ body{
  .container .loader .COLS li:hover{
     transform: translateX(-45px);
     background: var(--ctr);
+    animation: animate 2s linear forwards ;
 } 
 .container .loader .COLS li::before{
     content: "";
