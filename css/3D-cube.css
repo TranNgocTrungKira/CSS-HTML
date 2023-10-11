@@ -1,0 +1,206 @@
+:root{
+    --bgprimary: #222126;
+    --first: #ff7bc0;
+    --second: #974dc4;
+    --thirt:#51409a;
+    --four: #303868;
+    --five:#635ada;
+    --six: #219be4;
+    --bgforignt: whitesmoke;
+    --rotate:20deg;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    color: transparent;
+    background: radial-gradient(var(--second), var(--bgprimary),transparent );
+}
+.container{
+    position:relative;
+    top:-40px;
+    transform-style: preserve-3d;
+    animation: animatepri 20s linear infinite ;
+    transform-origin: bottom;
+}
+  @keyframes animatepri {
+    0%{
+        transform: perspective(1000px) rotateX(var(--rotate)) rotateY(var(--rotate));
+    }
+    100%{
+        transform: 
+        perspective(1000px) rotateX(calc(var(--rotate) + 360deg)) rotateY(calc(var(--rotate) + 360deg));
+    }
+} 
+.container .loader{
+    position: absolute;
+    transform-style: preserve-3d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container .loader:nth-child(2){
+    transform-style: preserve-3d;
+    transform: translateZ(70px);
+}
+ .container .loader:nth-child(3){
+    transform-style: preserve-3d;
+    transform: translateZ(140px); } 
+
+.container .loader .cube{
+    transform-style: preserve-3d;
+    margin-bottom: 70px;
+}
+.container .loader .cube:nth-child(2){
+    transform-style: preserve-3d;
+}
+.container .loader .cube:nth-child(3){
+    transform-style: preserve-3d;
+}
+.container .loader .cube .box{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translate(calc(-70px * var(--x)), calc(-70px * var(--y)));
+    transform-style: preserve-3d;
+}
+.container .loader .cube .box span{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: var(--bgforignt);
+    transform-style: preserve-3d;
+    overflow: hidden;
+    filter: brightness(1.8);
+    box-shadow: 0 0 20px var(--bgprimary),
+    0 0 40px var(--bgforignt),
+    0 0 60px var(--bgforignt);
+}
+.container .cube div span:nth-child(1){
+    transform: rotateX(0deg) translate3d(0,0,30px);
+} 
+.container .cube div span:nth-child(2){
+    transform: rotateX(0deg) translate3d(0,-60px,-30px);
+}
+ .container .cube div span:nth-child(3){
+    transform: rotateX(-90deg) translate3d(0,0,-150px);
+}
+ .container .cube div span:nth-child(4){
+    transform: rotateX(90deg) translate3d(0,0,150px);
+}
+ .container .cube div span:nth-child(5){
+    transform: rotateY(90deg) translate3d(0,-240px,30px);
+}
+ .container .cube div span:nth-child(6){
+    transform: rotateY(270deg) translate3d(0,-300px,30px);
+}
+.container .cube div span:nth-child(1)::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left top,var(--second),var(--four));
+    filter: blur(5px);
+    border: 1px solid var(--bgprimary);
+} 
+.container .cube div span:nth-child(6)::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right bottom, var(--four),var(--first));
+    filter: blur(5px);
+    border: 1px solid var(--bgprimary);
+} 
+.container .cube div span:nth-child(5)::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--six),var(--five));
+    filter: blur(5px);
+    border: 1px solid var(--bgprimary);
+} 
+.container .cube div span:nth-child(2)::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--five),var(--thirt));
+    filter: blur(5px);
+    border: 1px solid var(--bgprimary);
+} 
+.container .cube div span:nth-child(4)::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right,var(--thirt),var(--five));
+    filter: blur(5px);
+    border: 1px solid var(--bgprimary);
+} 
+.container .cube div span:nth-child(3)::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right,var(--four),var(--thirt));
+    filter: blur(5px);
+    border: 1px solid var(--bgprimary);
+} 
+.Btn-01{
+    width: 10%;
+    height: 10vh;
+    border: 4px solid var(--bgforignt);
+    border-radius: 30px;
+    text-align: center;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    background-color: transparent;
+    opacity: .7;
+   
+}
+.Btn-01 a{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--bgforignt);
+    font-weight: 1000;
+    scroll-behavior: smooth;
+
+}
+.Btn-02{
+    width: 10%;
+    height: 10vh;
+    border: 4px solid var(--bgforignt);
+    border-radius: 30px;
+    text-align: center;
+    position: absolute;
+    left: 74%;
+    bottom: 5%;
+    background-color: transparent;
+    opacity: .7;
+}
+.Btn-02 a{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--bgforignt);
+    font-weight: 1000;
+}

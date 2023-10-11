@@ -182,7 +182,6 @@ body{
 }
 .container .loader .ROWS li a{
     text-transform: uppercase;
-    list-style: none;
     font-size: 20px;
     box-sizing: border-box;
     text-decoration: none;

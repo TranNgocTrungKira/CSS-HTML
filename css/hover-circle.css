@@ -33,13 +33,13 @@ body{
     box-shadow:0 0 20px brown,
     0 0 40px brown,
     0 0 60px brown;
-    -webkit-box-reflect: below 2px linear-gradient(transparent,rgba(255,255,255,0.5));
-   
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,rgba(255,255,255,0.5));
+    transition-delay: 1.8s;
 }
 .contaner:hover .loader
 {
     animation:animateK 1.5s ease-in-out forwards;
-    transition: visibility 2s ease-in-out;
+    transition: visibility 1.8s ease-in-out;
     visibility:hidden;
 }
 @keyframes animateK{
@@ -77,9 +77,9 @@ body{
         opacity: 0;
     }
 } */
- .contaner:hover .box{
+.contaner:hover .box{
     opacity: 1;
-    transition-delay: 2.1s;
+    transition-delay: 1.5s;
 } 
 
 .contaner .loader span{
@@ -168,6 +168,7 @@ body{
      animation: animatebew 1s linear infinite forwards;
     /* animation-play-state: paused;   */
     opacity: 0;
+    transition: 2s ease-in-out;
 }
 @keyframes animatebew{
     0%{
@@ -194,6 +195,7 @@ body{
     transform-origin: bottom right;
     animation: animaterota 1s linear infinite forwards;
      /* animation-play-state: paused;  */
+     transition: 2s ease-in-out;
 
 }
 @keyframes animaterota{
