@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Project/css/womenday.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poltawski+Nowy:wght@700&family=Roboto:ital,wght@0,300;1,100;1,700&display=swap" rel="stylesheet">
+    <title>Happy Women's Day</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">happy women's day<br><span>20/10</span></h2>
+        <div class="loader">
+        <div class="heart"></div>
+        </div>
+    </div>
+
+    <script>
+        const loader=document.querySelector('.loader');
+        const title=document.querySelector('.title');
+        const container=document.querySelector('.container');
+        function hearts(){
+            var i=0
+            const count = 250;
+            while(i<count){
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                
+                const x =Math.floor(Math.random() * window.innerWidth);
+                const y =Math.floor(Math.random() * window.innerHeight);
+                const durian = Math.random() * 3;
+                const size= Math.random() * 3;
+                if(count <= 1){
+                    title.style.opacity='0';
+                }else{
+                heart.style.left = x+'px';
+                heart.style.top = y+'px';
+
+                heart.style.scale=size;
+                heart.style.animationDuration= 3+durian +'s';
+                
+
+                loader.appendChild(heart);
+                i++;
+            }
+        }
+    }
+    setTimeout(()=>{
+        title.classList.replace('title','content-no');
+    },2000);
+    setTimeout(()=>{
+        loader.classList.add('slideX');
+        title.classList.remove('title');
+    },8000);
+    function wishWomen(){
+        container.innerHTML=
+        "<h2 class='wish'>Nhân ngày Phụ nữ Việt Nam 20/10,<br> xin chúc một nữa thế giới của chúng ta<br>luôn thành công, hạnh phúc!</h2>";
+    }
+      hearts();
+      setTimeout(()=>{
+          wishWomen();
+      },13000);
+    </script>
+</body>
+</html>

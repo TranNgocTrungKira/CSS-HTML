@@ -2,7 +2,7 @@
     --bgprimary: #222126;
     --first: #ff7bc0;
     --second: #974dc4;
-    --thirt:#51409a;
+    --third:#51409a;
     --four: #303868;
     --five:#635ada;
     --six: #219be4;
@@ -83,7 +83,7 @@ body{
     filter: brightness(1.8);
     box-shadow: 0 0 20px var(--bgprimary),
     0 0 40px var(--bgforignt),
-    0 0 60px var(--bgforignt);
+    0 0 50px var(--bgforignt);
 }
 .container .cube div span:nth-child(1){
     transform: rotateX(0deg) translate3d(0,0,30px);
