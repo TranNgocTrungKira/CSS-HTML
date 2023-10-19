@@ -7,6 +7,8 @@
     <title>3D-cube</title>
 </head>
 <body>
+    <section></section>
+    <div class="flood"></div>
     <div class="container">
         <div class="loader">
             <div class="cube">
@@ -250,10 +252,48 @@
         </div>
     </div>
     <button class="Btn-01">
-        <a href="#">Next</a>
+        <a href="womenday.html">Next</a>
     </button>
     <button class="Btn-02">
         <a href="hover-list-cube.html">Back</a>
     </button>
+    <script>
+        function star(){
+            const flood=document.querySelector('.flood');
+            const section=document.querySelector('section');
+            const count=100;
+            var i=0;
+            while(i<count)
+            {
+            const star=document.createElement('i');
+
+
+            const x=Math.floor(Math.random()* window.innerWidth);
+            const y=Math.floor(Math.random()* window.innerHeight);
+            const size=Math.random() *3;
+            const durian=Math.random()*2;
+
+            star.style.top=y+'px';
+            star.style.left=x+'px';
+
+            star.style.width=1+size+'px';
+            star.style.height=1+size+'px';
+
+            star.style.animationDuration=1.5+durian+'s';
+            star.style.animationDelay=durian+'s';
+
+
+            section.appendChild(star);
+            i++;
+            }
+        }
+        star();
+        let countStart = setInterval(()=>{
+            star();
+        },2000);
+        setTimeout(()=>{
+            clearInterval(countStart);
+        },10000);
+    </script>
 </body>
 </html>
