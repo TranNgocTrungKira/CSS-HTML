@@ -194,7 +194,7 @@ body{
     text-align: center;
     font-size: 20px;
     text-decoration: none;
-    color: rgb(178, 182, 185);
+    color: whitesmoke;
     font-weight: 1000;
     scroll-behavior: smooth;
 
@@ -218,6 +218,6 @@ body{
     text-align: center;
     font-size: 20px;
     text-decoration: none;
-    color: rgb(178, 182, 185);
+    color:whitesmoke;
     font-weight: 1000;
 }

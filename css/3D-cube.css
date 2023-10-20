@@ -64,7 +64,7 @@ section{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: -10;
+    z-index:-100;
 }
 section i{
     position: absolute;
@@ -80,16 +80,20 @@ section i{
 }
 @keyframes animateTwo {
     0%{
-        opacity: 0;
+        opacity: 0.3;
+        transform: translateX(20px);
     }
     10%{
-        opacity: 1;
+        opacity: 0.8;
+
     }
     80%{
-        opacity: 1;
+        opacity: 0.8;
+        transform: translateX(-20px);
     }
     100%{
         opacity: 0;
+
     }
     
 }
@@ -98,7 +102,7 @@ section i{
     position: absolute;
     transform-style: preserve-3d;
     transform: rotateX(-202deg) rotateY(-323deg) translateZ(-122px) translateX(40px) translateY(10px) ;
-    animation: animateThree  15s ease-in-out forwards;
+    animation: animateThree 15s ease-in-out infinite;
     animation-delay: 2s;
     transform-origin: bottom;
 } 
@@ -107,16 +111,13 @@ section i{
         transform: rotateX(-202deg) rotateY(-323deg) translateZ(-122px) translateX(40px)translateY(10px)rotateY(0);
     }
     30%{
-        transform: rotateX(-202deg) rotateY(-323deg) translateZ(-122px)translateX(40px)translateY(10px) rotateY(90deg) ;
-    }
-    50%{
-        transform: rotateX(-202deg) rotateY(-323deg) translateZ(-122px) translateX(40px)translateY(10px) rotateY(80deg) ;
+        transform: rotateX(-202deg) rotateY(-323deg) translateZ(-122px)translateX(40px)translateY(100px) rotateY(180deg);
     }
     70%{
-        transform: rotateX(-202deg) rotateY(-323deg) translateZ(-122px)translateX(70px)translateY(10px) rotateY(60deg) ;
+        transform: rotateX(-202deg) rotateY(-323deg) translateZ(-122px)translateX(100px)translateY(170px) rotateY(90deg) ;
     }
     100%{
-        transform: rotateX(-202deg) rotateY(-323deg) translateZ(-122px)translateX(70px)translateY(10px) rotateY(460deg) ;
+        transform: rotateX(-202deg) rotateY(-323deg) translateZ(-122px)translateX(40px)translateY(10px) rotateY(-360deg);
     }
 }
 
@@ -160,6 +161,7 @@ section i{
     background: var(--bgforignt);
     transform-style: preserve-3d;
     filter: brightness(1.8);
+    opacity: 0.6;
     box-shadow: 0 0 20px var(--bgprimary),
     0 0 40px var(--bgforignt),
     0 0 50px var(--bgforignt);  
